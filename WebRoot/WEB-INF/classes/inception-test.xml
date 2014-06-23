@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <package name="inception-test" extends="inception-default">
+
+        <action name="Test" class="com.inception.action.test.Test">
+            <result>/index.jsp</result>
+        </action>
+        
+        <action name="Sum" class="com.inception.action.test.Sum">
+        	<result name="positive">/positive.jsp</result>
+        	<result name="negative">/negative.jsp</result>
+        </action>
+
+        <!-- Add actions here -->
+    </package>
+</struts>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <package name="example" extends="inception-default">
+
+        <action name="Test" >
+            <result>/User/login.jsp</result>
+        </action>
+        
+        <action name="Hello">
+        	<result>/Home/home.jsp</result>
+        </action>
+
+        <action name="Login_*" method="{1}">
+            <result name="input">/example/Login.jsp</result>
+            <result type="redirectAction">Menu</result>
+        </action>
+
+        <!-- Add actions here -->
+    </package>
+</struts>

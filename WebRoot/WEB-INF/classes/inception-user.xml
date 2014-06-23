@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <package name="inception-user" extends="inception-default">
+
+        <action name="Login" class="com.inception.action.UserLogin" >
+        	<result type="redirect">/Admin.action</result>
+        	<result name="error">/User/error.jsp</result>
+        	<!-- <result name="input">/User/login.jsp</result> -->
+        </action>
+        <action name="Admin" class="com.inception.action.admin.Admin" >
+        	<result>/Admin/admin.jsp</result>
+        </action>
+        
+        <action name="AdminAdd" class="com.inception.action.admin.AdminAdd">
+        	<result>/Admin/admin_add.jsp</result>
+        	<result type="redirect">/Admin.action</result>
+        </action>
+        
+        <action name="UserMain" class="com.inception.action.UserMain">
+        	<result>/User/main.jsp</result>
+        </action>
+        
+        <action name="UserRegist" class="com.inception.action.UserRegist">
+        	<result type="redirect">/UserMain.action</result>
+        </action>
+    </package>
+</struts>

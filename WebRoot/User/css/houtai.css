@@ -1,0 +1,27 @@
+.body
+{
+	width:960px;
+	height:1424px;
+	margin: 0 auto;
+}
+.wapper
+{
+	width: 950px;
+	margin: 0 auto;
+	text-align:center;
+}
+.header
+{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 40px;
+	padding-top: 10px;
+}
+.logo {
+float: left;
+width: 230px;
+height: 50px;
+overflow: hidden;
+line-height: 10em;
+}
+a.logo:link,a.logo:hover,a.logo:visited,a.logo:active{background-image:url(../img/logo.jpg);background-repeat:no-repeat;}

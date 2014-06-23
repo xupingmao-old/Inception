@@ -1,0 +1,139 @@
+.body
+{
+	width:960px;
+	height:1424px;
+	margin: 0 auto;
+}
+.wapper
+{
+	width: 950px;
+	margin: 0 auto;
+	text-align:center;
+}
+.header
+{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 40px;
+	padding-top: 10px;
+}
+.logo {
+	float: left;
+	width: 230px;
+	height: 50px;
+	overflow: hidden;
+	line-height: 10em;
+}
+a.logo:link,a.logo:hover,a.logo:visited,a.logo:active{background-image:url(../img/logo.jpg);background-repeat:no-repeat;}
+.log-in-remind
+{
+	margin-left: 700px;
+}
+span
+{
+	color:#666;
+	font-size: 10px;
+	font-family: Arial, "宋体";
+	padding-top: 4px;
+	margin-right: -5px;
+}
+.log-in
+{
+	font-size: 14px;
+	text-decoration: none;
+	color: #37A;
+}
+.log-in:active
+{
+	color: #F93;
+}
+.middle
+{
+	background-image: url(../img/6.jpg);
+	background-repeat: no-repeat;
+	text-align: left;
+	min-height: 400px;
+}
+.rightcontent
+{	margin-left: 628px;
+	background-color: white;
+	padding-top: 15px;
+	width: 320px;border-radius: 3px;
+	border: 1px solid #C9C9C9;
+	min-height: 400px;
+	
+}
+h1
+{
+	color:#2486C4;
+	font-size:20px;
+	font-weight:bold;
+	line-height:1.1;
+	text-align: left;
+	margin-left: 12px;
+	padding-right: 100px;
+}
+
+.regform-item
+{
+	position: relative;
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	zoom: 1;
+}
+.regform-item-first
+{
+	padding-top: 20px;
+}
+label {
+	display: inline-block;
+	text-align: left;
+	width: 60px;
+	height:25px;
+	font-size: 14px;
+	line-height: 30px;
+	color:#333;
+	padding-top: 5px;
+	margin-left: 5px;
+}
+.basic-input {
+	width: 200px;
+	padding:5px;
+	height: 25px;
+	font-size: 14px;
+	vertical-align: middle;
+	border-radius: 3px;
+	border: 1px solid #C9C9C9;
+}
+.btn-submit
+{
+	margin-top: 20px;
+	cursor: pointer;
+	color: white;
+	background: #2486C4;
+	border: 1px solid #2486C4;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 6px 26px;
+	border-radius: 3px;
+	margin-left: 78px;
+}
+.btn-submit:hover
+{
+	background-color: #4490F7;
+}
+.footer
+{
+	margin-top: 80px;
+}
+
+.introduce
+{
+
+margin-left: 650px;
+font-size: 12px;
+color: #999;
+text-decoration: none;
+}
