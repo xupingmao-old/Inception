@@ -1,4 +1,4 @@
-package com.inception.Dao;
+package com.inception.dao;
 
 import java.util.List;
 

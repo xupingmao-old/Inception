@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>登陆</title>
-		<link rel="stylesheet" type="text/css" href="css/denglu.css"/>
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="/Inception/User/css/denglu.css"/>
 		</head>
 	<body>
 		<div class="wapper">
@@ -15,7 +15,7 @@
 			<div class="middle">
 				<div class="content">
 					<div class="logintitle">   
-					<h1>账号登陆</h1>
+					<h1>账号登录</h1>
 					</div>
 					<div class="main">
 						<s:form action="/Login.action">
@@ -23,11 +23,17 @@
 								<label class="input_email"></label>
 								<s:textfield id="email" name="email" type="text" cssClass="basic-input" 
 	                                maxlength="60" placeholder="邮箱" tabindex="1" />
+	                                <s:fielderror cssStyle="list-style:none;color:red;padding:0px;">
+	                                	<s:param>emailError</s:param>
+	                                </s:fielderror>
 							</div>
 							<div class="item">
 								<label class="input_password"></label>
 								<s:textfield id="password" name="passwd" type="password" cssClass="basic-input" 
 	                                maxlength="20" tabindex="2" placeholder="密码"/>
+                                <s:fielderror cssStyle="list-style:none;color:red;padding:0px;">
+                                	<s:param>passwdError</s:param>
+                                </s:fielderror>
 							</div>
 							<div class="item">
 								<p class="remember">
@@ -36,14 +42,14 @@
 						        </p>
 							</div>
 							<div class="item">
-	        					<s:submit value="登陆" name="user_login" cssClass="btn-submit" tabindex="5"/>
-	        					<a href="regist.jsp">
+	        					<s:submit value="登录" name="user_login" cssClass="btn-submit" tabindex="5"/>
+	        					<a href="/Inception/User/regist.jsp">
 	        						<input type="button" value="注册" name="user_register" class="btn-register" tabindex="6"/>
 	        					</a>
 	        				</div>
 						</s:form>
 						<div class="otherway-login">
-							<span class="intro">可以使用以下方式登陆</span>
+							<span class="intro">可以使用以下方式登录</span>
 								<div class="item">
 									<a class="QQ-login" href="#" title="QQ"></a>
 									<a class="weibo-login" href="#" title="微博"></a>

@@ -13,7 +13,7 @@
 					<a href class="logo"></a>
 					<div class="log-in-remind">
 						<span>我已是会员</span>
-						<a href="" class="log-in" >立即登录</a>
+						<a href="login.jsp" class="log-in" >立即登录</a>
 					</div>
 				</div>
 				<div class="middle">
@@ -21,17 +21,29 @@
 						<div class="main">
 							<h1>用户注册</h1>
 							<s:form id="lzform" name="lzform" method="post" action="UserRegist.action">
+								<s:fielderror cssStyle="list-style:none;color:red;padding:0px;">
+	                                	<s:param>registError</s:param>
+	                                </s:fielderror>
 								<div class="regform-item regform-item-first">
 									<label>邮箱</label>
 									<s:textfield id="email" name="email" type="text" cssClass="basic-input" maxlength="60" tabindex="1" placeholder="邮箱"/>
+									<s:fielderror cssStyle="list-style:none;color:red;padding:0px;">
+	                                	<s:param>emailError</s:param>
+	                                </s:fielderror>
 								</div>
 								<div class="regform-item regform-item-second">
 									<label>密码</label>
-									<s:textfield id="password" name="passwd" type="password" cssClass="basic-input" maxlength="60" tabindex="2" placeholder="密码"/>
+									<s:textfield id="password" name="passwd" type="password" cssClass="basic-input" maxlength="60" tabindex="2" placeholder="密码,6-20个字母或数字"/>
+									<s:fielderror cssStyle="list-style:none;color:red;padding:0px;">
+	                                	<s:param>passwdError</s:param>
+	                                </s:fielderror>
 								</div>
 								<div class="regform-item regform-item-third">
 									<label>确认密码</label>
 									<s:textfield id="passwordagain" name="passwd2" type="password" cssClass="basic-input" maxlength="60" tabindex="3" placeholder="确认密码"/>
+									<s:fielderror cssStyle="list-style:none;color:red;padding:0px;">
+	                                	<s:param>passwd2Error</s:param>
+	                                </s:fielderror>
 								</div>
 								<div class="regform-item regform-item-fourth">
 									<s:submit value="注册" name="user_login" cssClass="btn-submit" tabindex="4"/>

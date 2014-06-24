@@ -15,8 +15,8 @@ create table inception_user(
 	renrenNo varchar(20) default NULL,
 	imageUrl varchar(1024) default NULL,
 	loginDate datetime comment 'last login date',
-	updateDate TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-	registDate datetime default NULL 
+	updateDate datetime NOT NULL,
+	registDate datetime NOT NULL
 );
 
 create table inception_zone(
@@ -24,13 +24,15 @@ create table inception_zone(
 	zoneName varchar(100) NOT NULL
 );
 
+insert into inception_zone (zoneName) values ('δ֪');
+
 create table inception_artist(
 	id int primary key auto_increment,
 	artistName varchar(50) NOT NULL,
 	artistPhoto varchar(1024) NOT NULL,
 	description varchar(1024) default NULL,
 	popularity int default 0,
-	zoneId int NOT NULL
+	zoneName varchar(100) default 0
 );
 
 create table inception_album(
@@ -38,7 +40,7 @@ create table inception_album(
 	albumName varchar(50) NOT NULL,
 	publishDate date NOT NULL,
 	imageUrl varchar(1024) NOT NULL,
-	recordCompany int NOT NULL,
+	recordCompany varchar(1024) NOT NULL,
 	artistId int NOT NULL,
 	description varchar(1024) NOT NULL
 );
@@ -46,10 +48,10 @@ create table inception_album(
 create table inception_music(
 	id int primary key auto_increment,
     musicName varchar(100) NOT NULL comment 'song name',
-	musicStyle int default 0,
-	artistId int default 0,
-	albumId int default 0,
-    uploadDate TIMESTAMP default CURRENT_TIMESTAMP,
+	musicStyle varchar(20) default NULL,
+	artistName varchar(20) default NULL,
+	albumName varchar(100) default NULL,
+    uploadDate datetime NOT NULL,
     description varchar(512) default NULL,
     publishDate datetime default NULL,
     imageUrl varchar(1024) default NULL,
@@ -65,7 +67,7 @@ create table inception_history(
     id int primary key auto_increment,
     userId int NOT NULL,
     musicId int NOT NULL,
-    historyDate TIMESTAMP default CURRENT_TIMESTAMP
+    historyDate datetime NOT NULL
 );
 
 create table inception_comment(
@@ -73,14 +75,14 @@ create table inception_comment(
 	content text,
 	userId int NOT NULL,
 	musicId int NOT NULL,
-	commentDate TIMESTAMP default CURRENT_TIMESTAMP
+	commentDate datetime NOT NULL
 );
 
 create table inception_log(
 	id int primary key,
 	logTitle varchar(1024) NOT NULL,
 	content text,
-	logDate TIMESTAMP default CURRENT_TIMESTAMP,
+	logDate datetime NOT NULL,
 	userId int NOT NULL
 );
 
@@ -99,14 +101,14 @@ create table inception_music_library(
 create table inception_gallery(
 	id int primary key auto_increment,
 	featureId int NOT NULL,
-	creationDate TIMESTAMP default CURRENT_TIMESTAMP,
+	creationDate datetime NOT NULL,
 	imageUrl varchar(1024) NOT NULL
 );
 
 create table inception_feature(
 	id int primary key auto_increment,
 	featureName varchar(100) NOT NULL,
-	creationDate TIMESTAMP default CURRENT_TIMESTAMP,
+	creationDate datetime NOT NULL,
 	description text,
 	zoneId int ,
 	userId int
@@ -117,7 +119,7 @@ create table inception_message(
 	content text,
 	userFrom int NOT NULL,
 	userTo int NOT NULL,
-	messageDate TIMESTAMP default CURRENT_TIMESTAMP
+	messageDate datetime NOT NULL
 );
 
 create table inception_log_comment(
@@ -125,7 +127,7 @@ create table inception_log_comment(
 	content text,
 	userId int NOT NULL,
 	logId int NOT NULL,
-	commentDate TIMESTAMP default CURRENT_TIMESTAMP
+	commentDate datetime NOT NULL
 );
 
 
@@ -134,7 +136,7 @@ create table inception_log_comment(
 create table inception_board(
 	id int primary key auto_increment,
 	musicId int NOT NULL,
-	boardDate TIMESTAMP default CURRENT_TIMESTAMP
+	boardDate datetime NOT NULL
 );
 
 	

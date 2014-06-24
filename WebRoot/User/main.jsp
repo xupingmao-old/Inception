@@ -7,10 +7,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Welcom</title>
+		<title>Welcome</title>
 		<link rel="stylesheet" type="text/css" href="User/css/denglu.css"/>
 		</head>
 	<body>
-		<h1>Hello, ${userName }</h1>
+		<h1>Hello, ${id}</h1>
+		<table>
+			<tr><td colspan="2" align="center">用户信息</td></tr>
+			<tr><td>用户名</td><td>${user.userName }</td></tr>
+			<tr><td>邮箱</td><td>${user.email }</td></tr>
+		</table>
 	</body>
 </html>

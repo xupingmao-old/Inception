@@ -8,9 +8,9 @@
 </head>
 <body>
 <h1>Welcome</h1>
-<a href="User/login.jsp">登陆</a><br/>
+<a href="User/login.jsp">登录</a><br/>
 <a href="Test">测试</a><br/>
 <a href="sum.jsp">测试加</a><br/>
-<p><a href="Admin">管理员</a></p>
+<p><a href="Admin.action">管理员</a></p>
 </body>
 </html>
