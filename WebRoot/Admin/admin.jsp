@@ -38,6 +38,6 @@
 	</s:iterator>
 </table>
 </div>
-<p><a href="Admin/admin_add.jsp">添加用户</a></p>
+<p><a href="admin_add.jsp">添加用户</a></p>
 </body>
 </html>

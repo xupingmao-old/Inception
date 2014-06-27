@@ -67,9 +67,49 @@ public class User {
 	public int getPermission() {
 		return permission;
 	}
+	/**
+	 * @param sPermission the sPermission to set
+	 */
+	public void setSPermission(String sPermission) {
+		this.sPermission = sPermission;
+	}
+	/**
+	 * @return the sPermission
+	 */
+	public String getSPermission() {
+		return sPermission;
+	}
+	/**
+	 * @param sex the sex to set
+	 */
+	public void setSex(int sex) {
+		this.sex = sex;
+	}
+	/**
+	 * @return the sex
+	 */
+	public int getSex() {
+		return sex;
+	}
+	/**
+	 * @param sSex the sSex to set
+	 */
+	public void setSSex(String sSex) {
+		this.sSex = sSex;
+	}
+	/**
+	 * @return the sSex
+	 */
+	public String getSSex() {
+		return sSex;
+	}
+//	private String index; // for multi operation in jsp;
 	private int id;
 	private int userType ; // ÓÃ»§×¢²áÀàÐÍ 0 ±¾Õ¾×¢²á 1 weibo×¢²á 2 qq×¢²á 3 renren
 	private int permission; // 
+	private String sPermission;
+	private int sex;
+	private String sSex;
 	private String email;
 	private String userName;
 	private String passwd;

@@ -13,10 +13,11 @@
         <action name="Logout" class="com.inception.action.UserLogoutAction">
         	<result type="redirect">Home.action</result>
         </action>
-        <action name="Admin" class="com.inception.action.admin.AdminAction" >
-        	<result>/Admin/admin.jsp</result>
-        </action>
         
+        <action name="AdminMain" class="com.inception.action.admin.AdminMainAction">
+        	<result name="success">/Admin/houtai.jsp</result>
+        	<result name="error">/User/not_login.jsp</result>
+        </action>
         <action name="AdminAdd" class="com.inception.action.admin.AdminAddAction">
         	<result>/Admin/admin_add.jsp</result>
         	<result type="redirect">Admin.action</result>
@@ -30,14 +31,18 @@
         <action name="AdminUserManage" class="com.inception.action.admin.AdminUserManageAction">
         	<result>/Admin/user_manage.jsp</result>
         </action>
-        
+        <action name="Admin" class="com.inception.action.admin.AdminAction" >
+        	<result>/Admin/admin.jsp</result>
+        </action>
+        <action name="AdminAajx" class="com.inception.action.admin.AdminAjaxAction">
+        </action>
         <action name="UserMain" class="com.inception.action.UserMainAction">
         	<result name="success">/User/main.jsp</result>
         	<result name="error">/User/not_login.jsp</result>
         </action>
         
         <action name="UserRegist" class="com.inception.action.UserRegistAction">
-        	<result name="success" type="redirect">/Admin.action?id=${id}</result>
+        	<result name="success" type="redirectAction">Home.action</result>
         	<result name="input" >/User/regist.jsp</result>
         </action>
         

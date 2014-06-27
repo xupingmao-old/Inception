@@ -24,7 +24,9 @@ public class UserDao{
 		user.setEmail(rs.getString("email"));
 		user.setUserName(rs.getString("userName"));
 		user.setUserType(rs.getInt("userType"));
+		user.setPermission(rs.getInt("permission"));
 		user.setPasswd(rs.getString("passwd"));
+		user.setSex(rs.getInt("sex"));
 		user.setQqNo(rs.getString("qqNo"));
 		user.setWeiboNo(rs.getString("weiboNo"));
 		user.setRenrenNo(rs.getString("renrenNo"));
@@ -220,4 +222,23 @@ public class UserDao{
 		ps.execute();
 	}
 
+	public int getUsersCount() throws SQLException{
+		Connection conn = util.getConnection();
+		String sql = "select COUNT(*) from inception_user;";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+		if( rs.next()){
+			// index starts at 1;
+			return rs.getInt(1);
+		}
+		return 0;
+	}
+	
+	public void delteUserById(int id) throws SQLException{
+		Connection conn = util.getConnection();
+		String sql = "delete from inception_user where id = ?";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setInt(1, id);
+		ps.execute();
+	}
 }

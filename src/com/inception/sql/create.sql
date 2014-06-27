@@ -49,12 +49,17 @@ create table inception_music(
 	id int primary key auto_increment,
     musicName varchar(100) NOT NULL comment 'song name',
 	musicStyle varchar(20) default NULL,
+	musicLanguage varchar(20) default NULL,
 	artistName varchar(20) default NULL,
 	albumName varchar(100) default NULL,
     uploadDate datetime NOT NULL,
     description varchar(512) default NULL,
     publishDate datetime default NULL,
     imageUrl varchar(1024) default NULL,
+    musicUrl varchar(1024) default NULL,
+    fileSize int default 0,
+    musicLength time default NULL,
+    lyrics text default NULL,
     CTR int default 0 comment 'click ratio'
 );
 

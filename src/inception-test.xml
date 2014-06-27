@@ -14,6 +14,10 @@
         	<result name="positive">/positive.jsp</result>
         	<result name="negative">/negative.jsp</result>
         </action>
+        
+        <action name="TestMulti" class="com.inception.action.test.TestMultiAction">
+        	<result>/testMulti.jsp</result>
+        </action>
 
         <!-- Add actions here -->
     </package>

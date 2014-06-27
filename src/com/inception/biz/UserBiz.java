@@ -30,12 +30,19 @@ public class UserBiz {
 		userDao.userSaveByEmail(user);
 	}
 	
+	public int getUsersCount() throws SQLException{
+		return userDao.getUsersCount();
+	}
 	public User findUserByEmail(String email) throws SQLException{
 		return userDao.userListByEmail(email);
 	}
 	
 	public User findUserById(int id) throws SQLException{
 		return userDao.userListByUserId(id);
+	}
+	
+	public void deleteUserById(int id)throws SQLException{
+		userDao.delteUserById(id);
 	}
 	
 	public List<User> findAllUsers() throws SQLException{
