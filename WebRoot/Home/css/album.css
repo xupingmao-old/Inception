@@ -1,0 +1,24 @@
+.home-main
+{
+	background:#fff;
+	margin:0 auto;
+	margin-top:0px;
+	width:960px;
+}
+
+.album-cover img
+{
+	width:300px;
+	height:132px;
+}
+.album-items
+{
+	overflow:hidden;
+}
+.album-item
+{
+	display: block;
+	width: 420px;
+	float: left;
+	padding-left: 30px;
+}

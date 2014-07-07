@@ -11,12 +11,66 @@
     <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
   </filter>
   	
+  	<filter>
+  		<filter-name>myfilter</filter-name>
+  		<filter-class>com.inception.filter.MyFilter</filter-class>
+  	</filter>
+
+   
+   <servlet>
+  <servlet-name>FilesServlet</servlet-name>       
+  <servlet-class>com.inception.servlets.FilesServlet</servlet-class>  
+  </servlet>
+  <servlet>
+  	<servlet-name>HeadServlet</servlet-name>
+  	<servlet-class>com.inception.servlets.HeadServlet</servlet-class>
+  </servlet>
+    <servlet>
+  	<servlet-name>ImageServlet</servlet-name>
+  	<servlet-class>com.inception.servlets.ImageServlet</servlet-class>
+  </servlet>
+    <servlet>
+  	<servlet-name>AlbumImageServlet</servlet-name>
+  	<servlet-class>com.inception.servlets.AlbumImageServlet</servlet-class>
+  </servlet>
+   
+    <servlet-mapping>  
+        <servlet-name>FilesServlet</servlet-name>  
+        <url-pattern>/FilesServlet</url-pattern>  
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    	<servlet-name>HeadServlet</servlet-name>
+    	<url-pattern>/HeadServlet</url-pattern>
+    </servlet-mapping>
+    
+        <servlet-mapping>
+    	<servlet-name>ImageServlet</servlet-name>
+    	<url-pattern>/ImageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>AlbumImageServlet</servlet-name>
+    	<url-pattern>/AlbumImageServlet</url-pattern>
+    </servlet-mapping>
+    
    <filter-mapping>
    	<filter-name>struts2</filter-name>
-       <url-pattern>/*</url-pattern>
+       <url-pattern>*.action</url-pattern>
    </filter-mapping>
    
-
+   <filter-mapping>
+   		<filter-name>struts2</filter-name>
+   		<url-pattern>*.jsp</url-pattern>
+   </filter-mapping>
+   
+   
+ <!--   
+   <filter-mapping>
+   	<filter-name>myfilter</filter-name>
+   	<url-pattern>/User/*</url-pattern>
+   </filter-mapping>
+   -->
+   
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>

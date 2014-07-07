@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <package name="inception-home" extends="struts-default">
+        <action name="Home" class="com.inception.action.home.HomeAction">
+        	<result >/Home/home.jsp</result>
+        </action>
+        
+        <action name="Play" class="com.inception.action.home.PlayAction">
+        	<result>/Home/play.jsp</result>
+        </action>
+        
+        <action name="PlayAlbum" class="com.inception.action.home.PlayAlbumAction">
+        	<result>/Home/play.jsp</result>
+        </action>
+        
+        <action name="Musics" class="com.inception.action.home.MusicAction">
+        	<result name="success" type="stream">
+        		<param name="inputName">downloadFile</param>
+        		<param name="bufferSize">1024</param>
+        	</result>
+        </action>
+        <action name="ShowAll" class="com.inception.action.home.ShowAllAction">
+        	<result name="success">/Home/show-all.jsp</result>
+        </action>
+        
+       	<action name="Album" class="com.inception.action.home.AlbumAction">
+        	<result name="success">/Home/album-list.jsp</result>
+        </action>
+        
+        <action name="ClearPlayList" class="com.inception.action.home.ClearPlayListAction">
+        	<result type="redirect">/Home.action</result>
+        </action>
+    </package>
+</struts>

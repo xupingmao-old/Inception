@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <package name="inception-admin" extends="inception-default">
+        
+        <action name="AdminMain" class="com.inception.action.admin.AdminMainAction">
+        	<result name="success">/Admin/houtai.jsp</result>
+        	<result name="input">/Admin/houtai.jsp</result>
+        </action>
+        <action name="AdminMusic" class="com.inception.action.admin.AdminMusicAction">
+        	<result name="success">/Admin/music-list.jsp</result>
+        </action>
+        <action name="AdminMusicAdd" class="com.inception.action.admin.AdminMusicAddAction">
+        	<result name="success" type="redirect">/AdminMusic.action</result>
+        	<result name="input">/Admin/add-music.jsp</result>
+        </action>
+        <action name="AdminMusicUpdate" class="com.inception.action.admin.AdminMusicUpdateAction">
+        	<result name="success" type="redirect">/AdminMusic.action</result>
+        	<result name="input">/Admin/edit_music.jsp</result>
+        	<result name="error">/User/not_login.jsp</result>
+        	<result name="permission_fail">/User/permission_fail.jsp</result>
+        </action>
+        <action name="AdminUpload" class="com.inception.action.admin.AdminUploadAction">
+        	<result name="success" type="redirect">/Admin.action</result>
+        	<result name="input">/Admin/admin_upload.jsp</result>
+        </action>
+        
+        <action name="UpdateMusicImage" class="com.inception.action.admin.UpdateMusicImage" >
+        	<result name="success">/Admin/update_music_img.jsp</result>
+        	<result name="input">/Admin/update_music_img.jsp</result>
+        </action>
+        <action name="UpdateMusicLyrics" class="com.inception.action.admin.UpdateMusicLyrics" >
+        	<result name="success">/Admin/update-music-lrc.jsp</result>
+        	<result name="input">/Admin/update-music-lrc.jsp</result>
+        </action>
+        <action name="AdminAlbumList" class="com.inception.action.admin.AdminAlbumListAction">
+        	<result >/Admin/album-list.jsp</result>
+        </action>
+        <action name="AddAlbum" class="com.inception.action.admin.AddAlbumAction">
+        	<result name="success" type="redirect">AdminAlbumList.action</result>
+        	<result name="input">/Admin/add-album.jsp</result>
+        </action>
+        
+        <action name="UpdateAlbum" class="com.inception.action.admin.UpdateAlbum">
+        	<result name="success" type="redirect">AdminAlbumList.action</result>
+        	<result name="input">/Admin/update-album.jsp</result>
+        </action>
+        
+    </package>
+</struts>

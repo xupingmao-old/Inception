@@ -20,11 +20,15 @@
 .logo {
 float: left;
 width: 230px;
-height: 50px;
+height: 100px;
 overflow: hidden;
 line-height: 10em;
 }
-a.logo:link,a.logo:hover,a.logo:visited,a.logo:active{background-image:url(../img/logo.jpg);background-repeat:no-repeat;}
+a.logo:link,a.logo:hover,a.logo:visited,a.logo:active
+{
+	background-image:url(../img/icon1.png);
+	background-repeat:no-repeat;
+}
 .middle
 {
 	background-image: url(../img/6.jpg);

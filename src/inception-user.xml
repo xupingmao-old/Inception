@@ -6,48 +6,58 @@
 <struts>
   <package name="inception-user" extends="inception-default">
 
-        <action name="Login" class="com.inception.action.UserLoginAction" >
+        <action name="Login" class="com.inception.action.user.UserLoginAction" >
         	<result name="success" type="redirectAction">Home.action</result>
         	<result name="input">/User/login.jsp</result>
         </action>
-        <action name="Logout" class="com.inception.action.UserLogoutAction">
+        <action name="Logout" class="com.inception.action.user.UserLogoutAction">
         	<result type="redirect">Home.action</result>
         </action>
-        
-        <action name="AdminMain" class="com.inception.action.admin.AdminMainAction">
-        	<result name="success">/Admin/houtai.jsp</result>
-        	<result name="error">/User/not_login.jsp</result>
-        </action>
-        <action name="AdminAdd" class="com.inception.action.admin.AdminAddAction">
-        	<result>/Admin/admin_add.jsp</result>
-        	<result type="redirect">Admin.action</result>
+        <action name="UserMain" class="com.inception.action.user.UserMainAction">
+        	<result name="success">/Home/infomanage.jsp</result>
         </action>
         
-        <action name="AdminUpload" class="com.inception.action.admin.AdminUploadAction">
-        	<result name="success" type="redirect">/Admin.action</result>
-        	<result name="input">/Admin/admin_upload.jsp</result>
+        <action name="UserPrefer" class="com.inception.action.user.UserPreferAction">
+        	<result name="success">/Home/user-prefer.jsp</result>
         </action>
         
-        <action name="AdminUserManage" class="com.inception.action.admin.AdminUserManageAction">
-        	<result>/Admin/user_manage.jsp</result>
-        </action>
-        <action name="Admin" class="com.inception.action.admin.AdminAction" >
-        	<result>/Admin/admin.jsp</result>
-        </action>
-        <action name="AdminAajx" class="com.inception.action.admin.AdminAjaxAction">
-        </action>
-        <action name="UserMain" class="com.inception.action.UserMainAction">
-        	<result name="success">/User/main.jsp</result>
-        	<result name="error">/User/not_login.jsp</result>
+        <action name="UserHistory" class="com.inception.action.user.UserHistory">
+        	<result name="success">/Home/user-history.jsp</result>
         </action>
         
-        <action name="UserRegist" class="com.inception.action.UserRegistAction">
+        <action name="DelPrefer" class="com.inception.action.user.DelPreferAction">
+        	<result name="success">/Home/user-prefer.jsp</result>
+        </action>
+        
+        <action name="UserUpdate" class="com.inception.action.user.UserUpdateAction">
+        	<result name="success" type="redirect">UserMain.action</result>
+        	<result name="input">/Home/update-info.jsp</result>
+        </action>
+        
+        <action name="UserRegist" class="com.inception.action.user.UserRegistAction">
         	<result name="success" type="redirectAction">Home.action</result>
         	<result name="input" >/User/regist.jsp</result>
         </action>
         
-        <action name="Home" class="com.inception.action.home.HomeAction">
-        	<result >/Home/home.jsp</result>
+        <action name="PlayAllPrefer" class="com.inception.action.user.PlayAllPrefer">
+        	<result name="success" type="redirect">Play.action</result>
+        </action>
+        
+        <action name="UpdateHead" class="com.inception.action.user.UpdateHeadAction">
+        	<result name="success" type = "redirectAction">UserMain.action</result>
+        	<result name="input" >/Home/update_head.jsp</result>
+        </action>
+        <action name="UpdatePasswd" class="com.inception.action.user.UpdatePasswdAction">
+        	<result name="success" type = "redirect">/User/passwd-changed.jsp</result>
+        	<result name="input" >/Home/update-passwd.jsp</result>
+        </action>
+        <action name="Prefer" class="com.inception.action.user.PreferAction">
+        	<result name="success">/success.txt</result>
+        	<result name="fail">/fail.txt</result>
+        </action>
+        <action name="UnPrefer" class="com.inception.action.user.UnPreferAction">
+        	<result name="success">/success.txt</result>
+        	<result name="fail">/fail.txt</result>
         </action>
     </package>
 </struts>

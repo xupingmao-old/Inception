@@ -8,10 +8,14 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
     <constant name="struts.ui.theme" value="simple"/>
+    <constant name="struts.configuration.xml.reload" value="true"/>
 	
 	<include file="inception-default.xml"/>
 	<include file="inception-user.xml" />
+	<include file="inception-admin.xml"/>
+	<include file="inception-home.xml"/>
     <include file="inception-test.xml"/>
+    <include file="inception-resource.xml"/>
 
     <!-- Add packages here -->
 

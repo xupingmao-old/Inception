@@ -103,7 +103,19 @@ public class User {
 	public String getSSex() {
 		return sSex;
 	}
-//	private String index; // for multi operation in jsp;
+/**
+	 * @param imageUrl the imageUrl to set
+	 */
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	/**
+	 * @return the imageUrl
+	 */
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	//	private String index; // for multi operation in jsp;
 	private int id;
 	private int userType ; // ÓÃ»§×¢²áÀàÐÍ 0 ±¾Õ¾×¢²á 1 weibo×¢²á 2 qq×¢²á 3 renren
 	private int permission; // 
@@ -118,4 +130,5 @@ public class User {
 	private String renrenNo;
 	private String updateDate;
 	private String registDate;
+	private String imageUrl;
 }

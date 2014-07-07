@@ -7,9 +7,14 @@
 
     <package name="inception-default" namespace="/Inception/" extends="struts-default">
 
-        <action name="Default">
-            <result>/User/login.jsp</result>
-        </action>
+        <global-results>
+            <result name="user-not-login">/User/not_login.jsp</result>
+             <result name="permission-fail">/User/permission_fail.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping result="user-not-login" exception="com.inception.action.exception.NotLoginException"></exception-mapping>
+       <exception-mapping result="permission-fail" exception="com.inception.action.exception.PermissionFailException"></exception-mapping>
+        </global-exception-mappings>    
     </package>
   
 </struts>

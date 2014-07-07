@@ -1,0 +1,303 @@
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	background-color:#fff;
+}
+::-webkit-scrollbar-track {
+	background-color:#fff;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0)
+}
+::-webkit-scrollbar-track:hover {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+	background-color:#fefefe;
+}
+::-webkit-scrollbar-track:active {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+	background-color:#f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0,0.05);
+	border-radius: 10px;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1)
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0,0,0,0.4);
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1)
+}
+::-webkit-scrollbar-thumb:active {
+	background: rgba(0,0,0,0.6)
+}
+
+.play_div
+{
+	margin:0 auto;
+	width:960px;
+}
+
+.music-list
+{
+	padding-top:20px;
+	padding-left:20px;
+	height:300px;
+	background:#fff;
+	width:615px;
+	bottom:0px;
+	float:left;
+	overflow:scroll;
+}
+
+.player_play_icon
+{
+	float:left;
+		
+}
+
+.lyrics_div
+{
+	float:right;
+	width:300px;
+	height:300px;
+	
+	padding-top: 20px;
+	padding-left: 20px;
+	background: #fff;
+	color: #666;
+	font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+}
+
+.music-info
+{
+	float:none;
+	width:100%;
+	height:50px;
+	background:red;
+}
+
+.control_container
+{
+	margin:0 auto;
+	width:100%;
+	position:fixed;
+	bottom:0px;
+	background:url(/Inception/Home/images/playbar.png) 0 0 repeat-x;
+	height:53px;
+}
+
+.control
+{
+	margin:0 auto;
+	width:960px;
+	background:url(/Inception/Home/images/playbar.png) 0 0 repeat-x;
+}
+
+
+.btns {
+width: 157px;
+padding: 6px 0 0 6px;
+margin-top:6px;
+float:left;
+}
+
+.btns .pas {
+	width: 36px;
+	height: 36px;
+	margin-top: 0;
+	background:url(/Inception/Home/images/playbar.png) no-repeat;
+	background-position: 0 -165px;
+}
+
+.btns .pas:hover {
+background-position: -40px -165px;
+}
+
+.btns .ply:hover {
+background-position: -40px -204px;
+}
+
+.btns .prv:hover {
+background-position: -30px -130px;
+}
+
+.btns .nxt:hover {
+background-position: -110px -130px;
+}
+
+.btns a {
+	display: block;
+	float: left;
+	width: 28px;
+	height: 28px;
+	margin-right: 8px;
+	margin-top: 5px;
+	text-indent: -9999px;
+}
+a:hover {
+text-decoration: underline;
+color: #333;
+}
+
+.prv
+{
+	background:url(/Inception/Home/images/playbar.png) no-repeat;
+	background-position:0 -130px;
+}
+
+.btns .ply
+{
+	width: 36px;
+	height: 36px;
+	margin-top: 0;
+	background:url(/Inception/Home/images/playbar.png) no-repeat;
+	background-position:0 -204px;
+}
+.nxt
+{
+	background:url(/Inception/Home/images/playbar.png) no-repeat;
+	background-position:-80px -130px;
+}
+.play{
+	float:left;
+	position: relative;
+	width: 570px;
+	cursor:pointer;
+}
+
+.mbar{
+	margin-top:24px;
+	height: 9px;
+	background:#ccc;
+}
+
+.info
+{
+	float:left;
+	height:53px;
+	line-height:53px;
+	margin-left:30px;
+}
+
+.info span
+{	
+	color:#ccc;
+	height:100%;
+	line-height:53px;
+}
+
+.progress 
+{
+	height:100%;
+	background:red;
+	float:left;
+}
+
+.progress_icon
+{
+	float:left;
+	width: 22px;
+	height: 24px;
+	margin-left:-22px;
+	margin-top:-6px;
+	background:url(/Inception/Home/images/ply_btn.png) no-repeat;
+	background-position: 3 0;
+	
+}
+
+#lrc
+{
+	width: 300px;
+	height: auto;
+}
+
+p
+{
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.color
+{
+	color:red;
+}
+
+.list-item
+{
+	overflow:hidden;
+	padding-bottom:10px;
+}
+
+.list-item img
+{
+	width:50px;
+	height:50px;
+}
+
+.list-item-name
+{
+	display:inline-block;
+	padding-left:20px;
+	padding-top:10px;
+}
+
+.list-item-name a
+{
+	text-decoration:none;
+}
+
+
+.upload-lrc
+{
+	display:block;
+	padding-left:100px;
+	padding-top:100px;
+}
+
+.volume {
+line-height: 20px;
+height: 20px;
+float: left;
+margin-left: 15px;
+margin-top:20px;
+width: 50px;
+}
+.mute {
+text-indent: -999px;
+display: block;
+float: left;
+width: 16px;
+height: 16px;
+background: url(/Inception/Home/images/line.png) no-repeat -168px -732px;
+}
+.vol-slider-wrapper
+{
+width: 75px;
+margin-left: 22px;
+}
+#volSlider
+{
+width: 100%;
+height: 4px;
+border-radius: 2px;
+margin-top: 6px;
+position: relative;
+border: none;
+background: url(/Inception/Home/images/line.png) no-repeat 0px -444px;
+}
+#volSlider .ui-slider-range {
+background-color: white;
+height: 3px;
+border-radius: 5px;
+font-size: 3px;
+line-height: 3px;
+position: absolute;
+top: 0;
+left: 0;
+width: 50%;
+}
+
+.vol-slider
+{
+	cursor:pointer;
+}

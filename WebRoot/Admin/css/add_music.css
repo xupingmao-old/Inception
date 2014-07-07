@@ -1,0 +1,22 @@
+.add_div
+{
+	margin:0 auto;
+	margin-top:50px;
+	width:400px;
+}
+
+.add_div select,
+.add_div input[type=text]
+{
+	width:300px;
+}
+
+.add_div td
+{
+	padding-bottom:10px;
+}
+
+.error
+{
+	list-style:none;color:red;padding:0px;
+}

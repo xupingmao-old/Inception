@@ -26,28 +26,31 @@ create table inception_zone(
 
 insert into inception_zone (zoneName) values ('Î´Öª');
 
+drop table if exists inception_artist;
 create table inception_artist(
 	id int primary key auto_increment,
 	artistName varchar(50) NOT NULL,
-	artistPhoto varchar(1024) NOT NULL,
+	artistPhoto varchar(1024) default NULL,
 	description varchar(1024) default NULL,
 	popularity int default 0,
 	zoneName varchar(100) default 0
 );
 
+drop table if exists inception_album;
 create table inception_album(
 	id int primary key auto_increment,
 	albumName varchar(50) NOT NULL,
-	publishDate date NOT NULL,
-	imageUrl varchar(1024) NOT NULL,
-	recordCompany varchar(1024) NOT NULL,
-	artistId int NOT NULL,
-	description varchar(1024) NOT NULL
+	publishDate datetime default NULL,
+	imageUrl varchar(1024) default NULL,
+	recordCompany varchar(1024) default NULL,
+	artistName varchar(100) default NULL,
+	description varchar(1024) default NULL
 );
 
 create table inception_music(
 	id int primary key auto_increment,
-    musicName varchar(100) NOT NULL comment 'song name',
+	uploadedBy int default 0,
+    musicName varchar(100) NOT NULL comment 'music name',
 	musicStyle varchar(20) default NULL,
 	musicLanguage varchar(20) default NULL,
 	artistName varchar(20) default NULL,
@@ -97,8 +100,9 @@ create table inception_follow(
 	beFollowedId int NOT NULL
 );
 
-create table inception_music_library(
-	id int primary key,
+drop table if exists inception_preference ;
+create table inception_preference(
+	id int primary key auto_increment,
 	userId int NOT NULL,
 	musicId int NOT NULL
 );
@@ -137,7 +141,7 @@ create table inception_log_comment(
 
 
 
-# °ñµ¥
+# ï¿½ï¿½
 create table inception_board(
 	id int primary key auto_increment,
 	musicId int NOT NULL,

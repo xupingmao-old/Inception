@@ -20,11 +20,15 @@
 .logo {
 	float: left;
 	width: 230px;
-	height: 50px;
+	height: 100px;
 	overflow: hidden;
 	line-height: 10em;
 }
-a.logo:link,a.logo:hover,a.logo:visited,a.logo:active{background-image:url(../img/logo.jpg);background-repeat:no-repeat;}
+a.logo:link,a.logo:hover,a.logo:visited,a.logo:active
+{
+	background-image:url(../img/icon1.png);
+	background-repeat:no-repeat;
+}
 .log-in-remind
 {
 	margin-left: 700px;
@@ -33,7 +37,7 @@ span
 {
 	color:#666;
 	font-size: 10px;
-	font-family: Arial, "宋体";
+	font-family: Arial;
 	padding-top: 4px;
 	margin-right: -5px;
 }

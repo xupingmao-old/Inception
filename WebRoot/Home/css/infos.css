@@ -1,0 +1,77 @@
+.home_main
+{
+	margin:0 auto;
+	width:960px;
+	background:#fff;	
+}
+
+.user_icon
+{
+	float:left;
+	width:200px;
+	height:260px;
+	overflow:hidden;
+	padding-top:60px;
+}
+
+.user_icon img
+{
+	width:200px;
+	height:200px;
+}
+
+.info_div
+{
+	float:left;
+	padding-top:60px;
+	padding-left:80px;
+	width:300px;
+	font-family:"微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.info_div table
+{
+	width:100%;
+}
+
+.info_div table tr td
+{
+	padding-top:20px;
+}
+
+.info_div table tr td input[type=text]
+{
+	width:160px;	
+}
+
+.info_div table tr td select
+{
+	width:160px;
+}
+
+
+.history_div
+{
+	float:right;
+	/*background:red;*/
+	width:200px;
+	height:800px;
+	font-family:"微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top:0px;
+	padding-top:60px;
+	padding-right:20px;
+	padding-left:20px;
+	border:1px solid #ccc;
+}
+
+.entry_title
+{
+	display:block;
+	font-size:16px;
+}
+.entry_date
+{
+	display:inline-block;
+	font-size:10px;
+	color:#ccc;
+}

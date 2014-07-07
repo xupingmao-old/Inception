@@ -1,0 +1,27 @@
+.show_div
+{
+	width:1000px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.fold_img_div
+{
+	overflow:hidden;
+	float:left;
+}
+.show_img_div
+{
+	float:left;
+}
+
+.show_img_div img{
+	width:660px;
+	height:273px;
+	opacity:1;
+}
+.fold_img_div img
+{
+	height:273px;
+	opacity:0.5;
+}
+

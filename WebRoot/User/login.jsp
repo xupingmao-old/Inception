@@ -10,7 +10,7 @@
 	<body>
 		<div class="wapper">
 			<div class="header">
-				<a href class="logo"></a>
+				<a href="/Inception/Home.action" class="logo"></a>
 			</div>
 			<div class="middle">
 				<div class="content">

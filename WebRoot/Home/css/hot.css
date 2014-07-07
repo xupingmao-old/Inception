@@ -1,0 +1,47 @@
+.hot_div
+{
+	width:200px;
+	float:right;
+	font-family: "Microsoft Yahei";
+	/*border:2px solid #ccc;*/
+}
+
+.hot_title span
+{
+	display:block;
+	padding-top:20px;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:10px;
+}
+.hot_title hr
+{
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.hot_music_list a
+{
+	text-decoration:none;
+	padding-left:10px;
+}
+
+.hot_music_ctr
+{
+	font-size:10px;
+	color:#ccc;
+	float:right;
+	padding-right:20px;
+}
+
+.check_all
+{
+	padding-top:20px;
+	padding-left:10px;
+}
+
+.check_all a
+{
+	text-decoration:none;
+	color:red;
+}

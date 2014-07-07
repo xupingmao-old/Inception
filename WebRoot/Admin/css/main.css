@@ -1,0 +1,29 @@
+body
+{
+	margin-left: 50px;
+	margin-top: 10px;
+}
+span
+{
+	line-height:19px;
+	font-size: 14px;
+}
+.header
+{
+	margin-bottom: 20px;
+}
+.header span
+{
+	font-size: 14px;
+	font-family: "宋体";
+	font-weight:bold;
+	color: #555;
+}
+
+a
+{
+	text-decoration: none;
+	margin-right: 3px;
+	margin-left: 3px;
+	font-size: 14px;
+}

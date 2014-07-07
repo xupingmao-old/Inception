@@ -13,15 +13,6 @@
 </style>
 </head>
 <body>
-<!-- 
-<s:bean name="org.apache.struts2.util.Counter" id="counter">
-   <s:param name="first" value="1" />
-   <s:param name="last" value="10" />
-   <s:iterator>
-     counter:<s:property/>
-   </s:iterator>
-</s:bean>
--->
 
 <div class="userList">
 <table class="table">

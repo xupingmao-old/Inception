@@ -6,11 +6,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>注册</title>
 		<link rel="stylesheet" type="text/css" href="css/zhuce.css"/>
-		</head>
+<style>
+.error{
+color:red;
+}
+
+.error li span
+{
+color:red;
+padding-left:40px;
+}
+</style>
+</head>
 	<body>
 		<div class="wapper">
 				<div class="header">
-					<a href class="logo"></a>
+					<a href="/Inception/Home.action" class="logo"></a>
 					<div class="log-in-remind">
 						<span>我已是会员</span>
 						<a href="login.jsp" class="log-in" >立即登录</a>
@@ -21,7 +32,7 @@
 						<div class="main">
 							<h1>用户注册</h1>
 							<s:form id="lzform" name="lzform" method="post" action="UserRegist.action">
-								<s:fielderror cssStyle="list-style:none;color:red;padding:0px;">
+								<s:fielderror cssClass="error" cssStyle="list-style:none;color:red;padding:0px;">
 	                                	<s:param>registError</s:param>
 	                                </s:fielderror>
 								<div class="regform-item regform-item-first">
